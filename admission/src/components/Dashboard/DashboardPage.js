@@ -7,7 +7,6 @@ import { receivefromfirebase } from "../Firebase/receivefromfirebase";
 import { getAuth } from "firebase/auth";
 
 export function AdminDashboardPage() {
-    
     return (
         <div>
             <Row>
@@ -32,12 +31,11 @@ export function AdminDashboardPage() {
 }
 
 export function StudentDashboardPage() {
+    
     const history = useHistory();
-    const auth = getAuth();
     
     async function handleClick(data) {
-        const studentData = await receivefromfirebase(auth.currentUser.uid);
-        console.log(studentData);
+        
         
         if (data == "fedseform") {
             history.push('/fedseform');

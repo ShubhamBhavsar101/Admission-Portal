@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Button, Card, Form, Nav, Row, Col} from "react-bootstrap"
 import NavigationBar from '../Dashboard/NavigationBar'
 import RadioField from '../RegistrationForms/Fields/RadioField'
 import TextField from '../RegistrationForms/Fields/TextField'
 import TextFieldInline from '../RegistrationForms/Fields/TextFieldInline'
+import { getAuth } from 'firebase/auth'
+import { useHistory } from 'react-router-dom'
+import { receivefromfirebase } from '../Firebase/receivefromfirebase'
 
 export default function MyProfile() {
+  
+  const history = useHistory();
+  const auth = getAuth();
+
+  const [studentData, setStudentData] = useState();
+  
+  ReceiveProfile().then((message) => setStudentData(message))
+
+  function ReceiveProfile() {
+    // return receivefromfirebase()
+  }
+
   return (
 	  <div>
 		  <NavigationBar />
@@ -13,7 +28,6 @@ export default function MyProfile() {
 			<Card.Header className='text-center' as="h2" >My Profile</Card.Header>
   		<Card.Body>
 				<Form>
-
 				<RadioField title="Cadidate Admission" 
             option1="First Year(F.E)" 
             option2="Direct Second Year(D.S.E)" 

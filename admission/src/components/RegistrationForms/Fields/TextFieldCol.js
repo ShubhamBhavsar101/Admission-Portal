@@ -52,25 +52,15 @@ export default function TextFieldCol({ title, placeholder, controlId }) {
         case "casteName":
           setCasteName(e.target.value)
           break
-        case "Nationality":
+        case "nationality":
           setNationality(e.target.value)
           break
-        // // case "permanentAddress":
-        // //   setPermanentAddress(e.target.value)
-        // //   break
         case "city":
           setCity(e.target.value)
-          // console.log(city)
           break
         case "district":
           setDistrict(e.target.value)
           break
-        // // case "guardianName":
-        // //   setGuardianName(e.target.value)
-        // //   break
-        // // case "guardianAddress":
-        // //   setGuardianAddress(e.target.value)
-        // //   break
         case "guardianCity":
           setGuardianCity(e.target.value)
           break

@@ -33,7 +33,7 @@ export default function NavigationBar({userType, userName}) {
                     <Nav.Link href="#link">Link</Nav.Link>
                     
                     <Nav.Link><img src={userImage} width="30px" height="30px" /></Nav.Link>
-                    <NavDropdown title={auth.currentUser.email} id="basic-nav-dropdown">
+                    <NavDropdown title="" id="basic-nav-dropdown">
                         <NavDropdown.Item  onClick={() => handleClick("logout")}>Log Out</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>

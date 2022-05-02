@@ -171,8 +171,6 @@ export default function FEDSEForm() {
           controlId="fatherName"
         />
 
-        
-
         <Row>
           <Col md>
             <DateField title="DOB" controlId="dob" />
