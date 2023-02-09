@@ -10,6 +10,7 @@ import outlooklogo from "../Assets/Sample_User_Icon.png"
 import { Nav } from "react-bootstrap"
 import { resetpassword } from '../Firebase/forgotpassword';
 import { checknewuser } from '../Firebase/checknewstudent';
+
 export default function Auth(params) {
     const auth = getAuth();
     const emailRef = useRef();
@@ -29,6 +30,7 @@ export default function Auth(params) {
     const [passwordresetemail, setpasswordresetemail] = useState(false);
 
     const [autherror, setautherror] = useState(undefined);
+
     useEffect(() => {
         try {
             setautherror(params.location.state)
@@ -37,6 +39,7 @@ export default function Auth(params) {
             console.log(e)
         }
     }, [params])
+
     async function handleforgotclick() {
         setforgotpassword(true);
         setloginorforgotpassword('Send Password Reset Email');
